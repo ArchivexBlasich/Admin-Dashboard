@@ -48,7 +48,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*----------- Custom Properties -----------*/
-
 :root {
     --page-color: #fff8f8;
     --side-bar-color: #1b56fd;
@@ -56,10 +55,30 @@ h1, h2, h3, h4, h5, h6 {
     --icon-color: brightness(0) saturate(100%) invert(90%) sepia(17%);
 }
 
+
+
 /*------------- Header Style ---------------*/
 .header {
     background-color: var(--page-color);
+    align-self: start;
+    padding: 1rem;
+    
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: max-content max-content;
 }
+
+/*------------- Header Style ---------------*/
+.header > div{
+    display: flex;
+}
+
+header .crud-proyect .proyect-btns,
+.header .search + div {
+    margin-left: auto;
+}
+
+
 
 
 
@@ -70,18 +89,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     color: var(--main-bg-color);
     padding: 1em;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    align-content: start;
-    gap: 1.5rem;
-}
-
-.side-bar li {
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    gap: 1rem;
-    margin-bottom: 5px;
 }
 
 .side-bar li > img {
@@ -102,10 +109,31 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
 }
 
+/*------------- Side-Bar Layout --------------- */
+.side-bar {
+display: grid;
+    grid-template-columns: 1fr;
+    align-content: start;
+    gap: 1.5rem;
+}
+
+.side-bar li {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 1rem;
+    margin-bottom: 5px;
+}
+
+
+
+
+
 /*------------- Main Style ---------------*/
 .main {
     background-color: var(--main-bg-color);
 }
+
+
 
 /*------------- Main Layout -------------- */
 .container {
@@ -113,7 +141,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr 4.5fr;
-    grid-template-rows: auto;
+    grid-template-rows: max-content 1fr;
 }
 
 .side-bar {
