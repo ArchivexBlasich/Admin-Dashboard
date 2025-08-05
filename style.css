@@ -53,6 +53,7 @@ h1, h2, h3, h4, h5, h6 {
     --page-color: #fff8f8;
     --side-bar-color: #1b56fd;
     --main-bg-color: #e9dfc3;
+    --icon-color: brightness(0) saturate(100%) invert(90%) sepia(17%);
 }
 
 /*------------- Header Style ---------------*/
@@ -60,9 +61,45 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--page-color);
 }
 
+
+
 /*------------- Side-Bar Style ---------------*/
 .side-bar {
     background-color: var(--side-bar-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--main-bg-color);
+    padding: 1em;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: start;
+    gap: 1.5rem;
+}
+
+.side-bar li {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 1rem;
+    margin-bottom: 5px;
+}
+
+.side-bar li > img {
+    filter: var(--icon-color);
+    height: 1.5rem;
+
+    align-self: center;
+}
+
+.side-bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-bar a {
+    color: var(--main-bg-color);
+    text-decoration: none;
 }
 
 /*------------- Main Style ---------------*/
